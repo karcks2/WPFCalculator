@@ -16,6 +16,7 @@ namespace WPFAppCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -26,8 +27,30 @@ namespace WPFAppCalculator
             Button button = (Button)sender;
             if (button != null)
             {
-                tbDisplay.Text = button.Content.ToString();
+                string buttonText = button.Content.ToString();
+
+                if (buttonText == ".")
+                {
+                    if (Display.Text.Contains("."))
+                    {
+                        return;
+                    }
+                }
+
+                if (Display.Text == "0" && buttonText != ".")
+                {
+                    Display.Text = buttonText;
+                }
+                else
+                {
+                    Display.Text += buttonText;
+                }
             }
+        }
+
+        private void btnClear_Click(object sender, RoutedEventArgs e)
+        {
+            Display.Text = "";
         }
     }
 }
