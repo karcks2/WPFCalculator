@@ -5,20 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFAppCalculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="410" Width="258">
+        Title="Calculator" Height="410" Width="258" ResizeMode="NoResize">
+        
 
-    <Grid Background="#FF3E4654">
+    <Grid Background="#FF3E4654"  >
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="51*"/>
             <ColumnDefinition Width="79*"/>
         </Grid.ColumnDefinitions>
+        
         <Button x:Name="btnClear" Content="C" HorizontalAlignment="Left" Margin="5,72,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="#FFC9655B" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Click="btnClear_Click"/>
         <Button Content="7" HorizontalAlignment="Left" Margin="5,132,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Click="Button_Click"/>
         <Button Content="4" HorizontalAlignment="Left" Margin="5,192,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Click="Button_Click"/>
         <Button Content="1" HorizontalAlignment="Left" Margin="5,252,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Click="Button_Click"/>
         <Button Content="." HorizontalAlignment="Left" Margin="5,312,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Click="Button_Click"/>
 
-        <Button x:Name="btnMinusAndPlus" Content="+/-" HorizontalAlignment="Left" Margin="65,72,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="25" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2"/>
+        <Button x:Name="btnMinusAndPlus" Content="+/-" HorizontalAlignment="Left" Margin="65,72,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="25" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2" Click="btnMinusAndPlus_Click"/>
         <Button Content="8" HorizontalAlignment="Left" Margin="65,132,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2" Click="Button_Click"/>
         <Button Content="5" HorizontalAlignment="Left" Margin="65,192,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2" Click="Button_Click"/>
         <Button Content="2" HorizontalAlignment="Left" Margin="65,252,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.ColumnSpan="2" Click="Button_Click"/>
@@ -30,12 +32,12 @@
         <Button Content="3" HorizontalAlignment="Left" Margin="23,252,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF3E4654" FontFamily="Bahnschrift Light" Grid.Column="1" Click="Button_Click"/>
         <Button Content="00" HorizontalAlignment="Left" Margin="23,312,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF475060" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1" Click="Button_Click"/>
 
-        <Button x:Name="btnDevide" Content="/" HorizontalAlignment="Left" Margin="83,72,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1"/>
-        <Button x:Name="btnMultiply" Content="*" HorizontalAlignment="Left" Margin="83,132,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1"/>
-        <Button x:Name="btnSubtract" Content="-" HorizontalAlignment="Left" Margin="83,192,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1"/>
-        <Button x:Name="btnAad" Content="+" HorizontalAlignment="Left" Margin="83,252,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1"/>
-        <Button x:Name="btnEquals" Content="=" HorizontalAlignment="Left" Margin="83,312,0,0" VerticalAlignment="Top" Height="60" Width="60" Foreground="White" FontSize="35" Background="#FF464D58" BorderBrush="#FF3E4654" FontFamily="Bahnschrift Light" Grid.Column="1"/>
+        <Button x:Name="btnDevide" Content="/" HorizontalAlignment="Left" Margin="83,72,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1" Click="btnDevide_Click"/>
+        <Button x:Name="btnMultiply" Content="*" HorizontalAlignment="Left" Margin="83,132,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1" Click="btnMultiply_Click"/>
+        <Button x:Name="btnSubtract" Content="-" HorizontalAlignment="Left" Margin="83,192,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1" Click="btnSubtract_Click"/>
+        <Button x:Name="btnAad" Content="+" HorizontalAlignment="Left" Margin="83,252,0,0" VerticalAlignment="Top" Height="60" Width="60" Background="#FF464D58" Foreground="White" FontSize="35" BorderBrush="#FF434343" FontFamily="Bahnschrift Light" Grid.Column="1" Click="btnAad_Click"/>
+        <Button x:Name="btnEquals" Content="=" HorizontalAlignment="Left" Margin="83,312,0,0" VerticalAlignment="Top" Height="60" Width="60" Foreground="White" FontSize="35" Background="#FF464D58" BorderBrush="#FF3E4654" FontFamily="Bahnschrift Light" Grid.Column="1" Click="btnEquals_Click"/>
 
-        <TextBox x:Name="Display" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="240" FontSize="50" TextAlignment="Right" Background="#FF3E4654" Foreground="White" BorderBrush="#FF3E4654" FontFamily="Bahnschrift Light" Margin="0,5,0,0" Height="62" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="Display" HorizontalAlignment="Left" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="240" FontSize="50" TextAlignment="Right" Background="#FF3E4654" Foreground="White" BorderBrush="#FF3E4654" FontFamily="Bahnschrift Light" Margin="0,5,0,0" Height="62" Grid.ColumnSpan="2" IsReadOnly="True"/>
     </Grid>
 </Window>
