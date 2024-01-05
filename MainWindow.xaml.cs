@@ -16,8 +16,10 @@ namespace WPFAppCalculator
     /// </summary>
     public partial class MainWindow : Window
     {
-        private double currentValue = 0;
-        private bool isNewNumber = true;
+        int num1;
+        int num2;
+
+        char op;
 
         public MainWindow()
         {
@@ -67,27 +69,54 @@ namespace WPFAppCalculator
 
         private void btnDevide_Click(object sender, RoutedEventArgs e)
         {
-
+            num1 = Int32.Parse(Display.Text);
+            op = '/';
+            Display.Clear();
         }
 
         private void btnMultiply_Click(object sender, RoutedEventArgs e)
         {
-
+            num1 = Int32.Parse(Display.Text);
+            op = '*';
+            Display.Clear();
         }
 
         private void btnSubtract_Click(object sender, RoutedEventArgs e)
         {
-
+            num1 = Int32.Parse(Display.Text);
+            op = '-';
+            Display.Clear();
         }
 
         private void btnAad_Click(object sender, RoutedEventArgs e)
         {
-            
+            num1 = Int32.Parse(Display.Text);
+            op = '+';
+            Display.Clear();
         }
 
         private void btnEquals_Click(object sender, RoutedEventArgs e)
         {
+            num2 = Int32.Parse(Display.Text);
+            int result = 0;
 
+            if(op == '+')
+            {
+                result = num1 + num2;
+            }
+            if (op == '-')
+            {
+                result = num1 - num2;
+            }
+            if (op == '/')
+            {
+                result = num1 / num2;
+            }
+            if (op == '*')
+            {
+                result = num1 * num2;
+            }
+            Display.Text = result.ToString();
         }
     }
 }
